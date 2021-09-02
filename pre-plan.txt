@@ -1,0 +1,11 @@
+Programming Languages
+
+*React.JS
+*Spring Boot
+*Spring HATEOAS
+*Spring Acutator
+*Hibernate
+*Spring Security
+*MySQL
+*Localization (I18N)
+
