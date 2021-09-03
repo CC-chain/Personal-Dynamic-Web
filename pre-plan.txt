@@ -12,7 +12,7 @@ Programming Languages & Tools
 *Hibernate
 *Spring Security
 *MySQL
-*Localization (I18N)
+*Localization & I18N
 *Maven
 *Servlet
 
