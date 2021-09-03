@@ -1,4 +1,4 @@
-Programming Languages
+Programming Languages & Tools
 
 *React.JS
 *Spring Boot
@@ -8,4 +8,6 @@ Programming Languages
 *Spring Security
 *MySQL
 *Localization (I18N)
+*Maven
+*Servlet
 
