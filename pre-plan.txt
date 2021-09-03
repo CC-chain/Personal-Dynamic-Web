@@ -1,5 +1,10 @@
 Programming Languages & Tools
 
+*Html
+*CSS
+*JavaScript
+*Java
+*Bootstrap
 *React.JS
 *Spring Boot
 *Spring HATEOAS
