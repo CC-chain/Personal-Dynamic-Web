@@ -15,4 +15,7 @@ Programming Languages & Tools
 *Localization & I18N
 *Maven
 *Servlet
+*Docker
+*Jenkins
+*AWS
 
