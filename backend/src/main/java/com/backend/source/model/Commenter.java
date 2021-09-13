@@ -23,7 +23,7 @@ public class Commenter {
 	private long Commenter_Id;
 
 	@ManyToOne
-	@JoinColumn(name = "ORG_BLOG_ID", foreignKey = @ForeignKey(name = "ORG_BLOG_ID_FK"))
+	@JoinColumn(name = "ORG_BLOG_ID", foreignKey = @ForeignKey(name = "COM_ORG_BLOG_ID_FK"))
 	private Org_Blog Org_Blog_Id;
 
 	@Column(name = "NAME")

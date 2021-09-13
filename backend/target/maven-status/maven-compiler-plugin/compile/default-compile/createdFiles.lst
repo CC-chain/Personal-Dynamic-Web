@@ -1,7 +1,16 @@
 com/backend/source/model/Org_Profile.class
+com/backend/source/model/Trs_Projects.class
+com/backend/source/model/Trs_Experiences.class
+com/backend/source/model/Trs_Blog.class
+com/backend/source/model/Trs_Abilities.class
+com/backend/source/model/Org_Tags.class
+com/backend/source/model/Log_Commenter.class
 com/backend/source/model/Org_Blog.class
+com/backend/source/model/Trs_Profile.class
 com/backend/source/model/Org_Projects.class
 com/backend/source/PersonalWebApplication.class
 com/backend/source/model/Org_Abilities.class
 com/backend/source/model/Language.class
+com/backend/source/model/Trs_Tags.class
+com/backend/source/model/Commenter.class
 com/backend/source/model/Org_Experiences.class
