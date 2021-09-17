@@ -7,8 +7,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity
 @Table(name = "LANGUAGE")
+@Data
+@NoArgsConstructor
 public class Language {
 
 	@Id
@@ -19,28 +24,4 @@ public class Language {
 	@Column(name = "NAME")
 	private String Name;
 
-	//--------------
-	// PUBLIC METHODS
-	//--------------
-	
-	public Language() {
-		
-	}
-	
-	public long getLang_Id() {
-		return Lang_Id;
-	}
-
-
-	public void setLang_Id(long lang_Id) {
-		Lang_Id = lang_Id;
-	}
-
-	public String getName() {
-		return Name;
-	}
-
-	public void setName(String name) {
-		Name = name;
-	}
 }

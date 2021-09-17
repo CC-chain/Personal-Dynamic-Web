@@ -42,7 +42,7 @@ public class BlogServiceImpl implements BlogService{
 														new ResourceNotFoundException("Blog","Id",id));
 		
 		existingBlog.setDate(blog.getDate());
-		existingBlog.setText(blog.getText());
+		existingBlog.setBlogContent(blog.getBlogContent());
 		existingBlog.setTitle(blog.getTitle());
 		blogRepository.save(existingBlog);
 		

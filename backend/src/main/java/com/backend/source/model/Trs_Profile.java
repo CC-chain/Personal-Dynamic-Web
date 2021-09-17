@@ -12,8 +12,13 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.Type;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity
 @Table(name = "TRS_PROFILE")
+@Data
+@NoArgsConstructor
 public class Trs_Profile {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,60 +42,5 @@ public class Trs_Profile {
 	@Column(name = "ABOUT", length = 65535, columnDefinition = "TEXT")
 	@Type(type = "text")
 	private String About;
-
-	// --------------
-	// PUBLIC METHODS
-	// --------------
-	
-	public Trs_Profile() {
-	}
-
-	public long getProfile_Id() {
-		return Profile_Id;
-	}
-
-	public void setProfile_Id(long profile_Id) {
-		Profile_Id = profile_Id;
-	}
-
-	public Org_Profile getOrg_Profile_Id() {
-		return Org_Profile_Id;
-	}
-
-	public void setOrg_Profile_Id(Org_Profile org_Profile_Id) {
-		Org_Profile_Id = org_Profile_Id;
-	}
-
-	public Language getLang_Id() {
-		return Lang_Id;
-	}
-
-	public void setLang_Id(Language lang_Id) {
-		Lang_Id = lang_Id;
-	}
-
-	public String getName() {
-		return Name;
-	}
-
-	public void setName(String name) {
-		Name = name;
-	}
-
-	public String getLocation() {
-		return Location;
-	}
-
-	public void setLocation(String location) {
-		Location = location;
-	}
-
-	public String getAbout() {
-		return About;
-	}
-
-	public void setAbout(String about) {
-		About = about;
-	}
 
 }

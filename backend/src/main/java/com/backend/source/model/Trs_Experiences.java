@@ -10,9 +10,14 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 
 @Entity
 @Table(name = "TRS_EXPERIENCES")
+@Data
+@NoArgsConstructor
 public class Trs_Experiences {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,69 +43,5 @@ public class Trs_Experiences {
 
 	@Column(name = "TYPE")
 	private String Type;
-	
-	//--------------
-	// PUBLIC METHODS
-	//--------------
-	
-	public Trs_Experiences() {
-	}
 
-	public long getExperiences_Id() {
-		return Experiences_Id;
-	}
-
-	public void setExperiences_Id(long experience_Id) {
-		Experiences_Id = experience_Id;
-	}
-
-	public Org_Experiences getOrg_Experiences_Id() {
-		return Org_Experiences_Id;
-	}
-
-	public void setOrg_Experiences_Id(Org_Experiences org_Experiences_Id) {
-		Org_Experiences_Id = org_Experiences_Id;
-	}
-
-	public Language getLang_Id() {
-		return Lang_Id;
-	}
-
-	public void setLang_Id(Language lang_Id) {
-		Lang_Id = lang_Id;
-	}
-
-	public String getName() {
-		return Name;
-	}
-
-	public void setName(String name) {
-		Name = name;
-	}
-
-	public String getInfo() {
-		return Info;
-	}
-
-	public void setInfo(String info) {
-		Info = info;
-	}
-
-	public String getLocation() {
-		return Location;
-	}
-
-	public void setLocation(String location) {
-		Location = location;
-	}
-
-	public String getType() {
-		return Type;
-	}
-
-	public void setType(String type) {
-		Type = type;
-	}
-	
-	
 }

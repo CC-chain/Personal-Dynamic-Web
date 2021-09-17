@@ -14,8 +14,13 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.Type;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity
 @Table(name = "COMMENTER")
+@Data
+@NoArgsConstructor
 public class Commenter {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,63 +43,4 @@ public class Commenter {
 	
 	@Column(name = "COMM_DATE")
 	private Date date;
-	
-		//--------------
-	// PUBLIC METHODS
-	//--------------
-	
-	public Commenter() {
-	}
-
-	public long getCommenter_Id() {
-		return Commenter_Id;
-	}
-
-	public void setCommenter_Id(long commenter_Id) {
-		Commenter_Id = commenter_Id;
-	}
-
-	public Org_Blog getOrg_Blog_Id() {
-		return Org_Blog_Id;
-	}
-
-	public void setOrg_Blog_Id(Org_Blog org_Blog_Id) {
-		Org_Blog_Id = org_Blog_Id;
-	}
-
-	public String getName() {
-		return Name;
-	}
-
-	public void setName(String name) {
-		Name = name;
-	}
-
-	public String getEmail() {
-		return Email;
-	}
-
-	public void setEmail(String email) {
-		Email = email;
-	}
-
-	public String getComment() {
-		return Comment;
-	}
-
-	public void setComment(String comment) {
-		Comment = comment;
-	}
-
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
-	
-	
-
-
 }

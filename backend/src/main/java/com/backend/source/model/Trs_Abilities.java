@@ -10,9 +10,14 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 
 @Entity
 @Table(name = "TRS_ABILITIES")
+@Data
+@NoArgsConstructor
 public class Trs_Abilities {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,53 +37,4 @@ public class Trs_Abilities {
 
 	@Column(name = "TYPE")
 	private String Type;
-
-	// --------------
-	// PUBLIC METHODS
-	// --------------
-	
-	public Trs_Abilities() {
-	}
-
-	public long getAbilities_Id() {
-		return Abilities_Id;
-	}
-
-	public void setAbilities_Id(long abilities_Id) {
-		Abilities_Id = abilities_Id;
-	}
-
-	public Org_Abilities getOrg_Abilities_Id() {
-		return Org_Abilities_Id;
-	}
-
-	public void setOrg_Abilities_Id(Org_Abilities org_Abilities_Id) {
-		Org_Abilities_Id = org_Abilities_Id;
-	}
-
-	public Language getLang_Id() {
-		return Lang_Id;
-	}
-
-	public void setLang_Id(Language lang_Id) {
-		Lang_Id = lang_Id;
-	}
-
-	public String getName() {
-		return Name;
-	}
-
-	public void setName(String name) {
-		Name = name;
-	}
-
-	public String getType() {
-		return Type;
-	}
-
-	public void setType(String type) {
-		Type = type;
-	}
-	
-
 }

@@ -10,9 +10,14 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 
 @Entity
 @Table(name = "TRS_TAGS")
+@Data
+@NoArgsConstructor
 public class Trs_Tags {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,44 +34,5 @@ public class Trs_Tags {
 
 	@Column(name = "NAME")
 	private String Name;
-
-	// --------------
-	// PUBLIC METHODS
-	// --------------
-
-	public Trs_Tags() {
-	}
-
-	public long getTags_Id() {
-		return Tags_Id;
-	}
-
-	public void setTags_Id(long tags_Id) {
-		Tags_Id = tags_Id;
-	}
-
-	public Org_Tags getOrg_Tags_Id() {
-		return Org_Tags_Id;
-	}
-
-	public void setOrg_Tags_Id(Org_Tags org_Tags_Id) {
-		Org_Tags_Id = org_Tags_Id;
-	}
-
-	public Language getLang_Id() {
-		return Lang_Id;
-	}
-
-	public void setLang_Id(Language lang_Id) {
-		Lang_Id = lang_Id;
-	}
-
-	public String getName() {
-		return Name;
-	}
-
-	public void setName(String name) {
-		Name = name;
-	}
 
 }

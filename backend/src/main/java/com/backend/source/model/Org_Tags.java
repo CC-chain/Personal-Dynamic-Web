@@ -7,8 +7,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity
 @Table(name = "ORG_TAGS")
+@Data
+@NoArgsConstructor
 public class Org_Tags {
 
 	@Id
@@ -18,28 +23,5 @@ public class Org_Tags {
 
 	@Column(name = "NAME")
 	private String Name;
-
-	// --------------
-	// PUBLIC METHODS
-	// --------------
-
-	public Org_Tags() {
-	}
-
-	public long getTags_Id() {
-		return Tags_Id;
-	}
-
-	public void setTags_Id(long tags_Id) {
-		Tags_Id = tags_Id;
-	}
-
-	public String getName() {
-		return Name;
-	}
-
-	public void setName(String name) {
-		Name = name;
-	}
 
 }

@@ -11,8 +11,13 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.Type;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity
 @Table(name = "ORG_BLOG")
+@Data
+@NoArgsConstructor
 public class Org_Blog {
 	
 	@Id
@@ -30,44 +35,5 @@ public class Org_Blog {
 	@Column(name = "DATE")
 	private Date Date;
 
-	//--------------
-	// PUBLIC METHODS
-	//--------------
-	
-	public Org_Blog() {
-	}
-	
-	public long getBlog_Id() {
-		return Blog_Id;
-	}
 
-	public void setBlog_Id(long blog_Id) {
-		Blog_Id = blog_Id;
-	}
-
-	public String getTitle() {
-		return Title;
-	}
-
-	public void setTitle(String title) {
-		Title = title;
-	}
-
-	public String getText() {
-		return BlogContent;
-	}
-
-	public void setText(String blogcontent) {
-		BlogContent = blogcontent;
-	}
-
-	public Date getDate() {
-		return Date;
-	}
-
-	public void setDate(Date date) {
-		Date = date;
-	}
-
-	
 }

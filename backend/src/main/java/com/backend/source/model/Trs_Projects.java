@@ -12,8 +12,13 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.Type;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity
 @Table(name = "TRS_PROJECTS")
+@Data
+@NoArgsConstructor
 public class Trs_Projects {
 
 	@Id
@@ -39,61 +44,5 @@ public class Trs_Projects {
 	@Column(name = "ABOUT", length = 65535, columnDefinition="TEXT")
 	@Type(type="text")
 	private String About;
-
-	//--------------
-	// PUBLIC METHODS
-	//--------------
 	
-
-	public Trs_Projects() {
-	}
-	
-	public long getProject_Id() {
-		return Project_Id;
-	}
-
-	public void setProject_Id(long project_Id) {
-		Project_Id = project_Id;
-	}
-
-	public Org_Projects getOrg_Projects_Id() {
-		return Org_Projects_Id;
-	}
-
-	public void setOrg_Projects_Id(Org_Projects org_Projects_Id) {
-		Org_Projects_Id = org_Projects_Id;
-	}
-
-	public Language getLang_Id() {
-		return Lang_Id;
-	}
-
-	public void setLang_Id(Language lang_Id) {
-		Lang_Id = lang_Id;
-	}
-
-	public String getName() {
-		return Name;
-	}
-
-	public void setName(String name) {
-		Name = name;
-	}
-
-	public String getInfo() {
-		return Info;
-	}
-
-	public void setInfo(String info) {
-		Info = info;
-	}
-
-	public String getAbout() {
-		return About;
-	}
-
-	public void setAbout(String about) {
-		About = about;
-	}
-
 }

@@ -11,9 +11,14 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.Type;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 
 @Entity
 @Table(name = "ORG_PROFILE")
+@Data
+@NoArgsConstructor
 public class Org_Profile {
 	
 	@Id
@@ -33,52 +38,5 @@ public class Org_Profile {
 	@Column(name="ABOUT" , length = 65535, columnDefinition="TEXT")
 	@Type(type="text")
 	private String About;
-	
 
-	//--------------
-	// PUBLIC METHODS
-	//--------------
-	public Org_Profile() {
-	}
-	
-	public long getProfile_id() {
-		return Profile_Id;
-	}
-
-	public void setProfile_id(long profile_id) {
-		Profile_Id = profile_id;
-	}
-
-	public String getName() {
-		return Name;
-	}
-
-	public void setName(String name) {
-		Name = name;
-	}
-
-	public Date getDateOfBirth() {
-		return DateOfBirth;
-	}
-
-	public void setDateOfBirth(Date dateOfBirth) {
-		DateOfBirth = dateOfBirth;
-	}
-
-	public String getLocation() {
-		return Location;
-	}
-
-	public void setLocation(String location) {
-		Location = location;
-	}
-
-	public String getAbout() {
-		return About;
-	}
-
-	public void setAbout(String about) {
-		About = about;
-	}
-	
 }

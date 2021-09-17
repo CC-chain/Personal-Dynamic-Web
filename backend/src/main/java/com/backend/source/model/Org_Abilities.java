@@ -7,8 +7,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity
 @Table(name = "ORG_ABILITIES")
+@Data
+@NoArgsConstructor
 public class Org_Abilities {
 
 	@Id
@@ -26,51 +31,5 @@ public class Org_Abilities {
 	private String Type;
 
 	
-	//--------------
-	// PUBLIC METHODS
-	//--------------
 
-
-	public Org_Abilities() {
-	}
-	
-	public long getAbilities_Id() {
-		return Abilities_Id;
-	}
-
-
-	public void setAbilities_Id(long abilities_Id) {
-		Abilities_Id = abilities_Id;
-	}
-
-
-	public String getName() {
-		return Name;
-	}
-
-
-	public void setName(String name) {
-		Name = name;
-	}
-
-
-	public int getRate() {
-		return Rate;
-	}
-
-
-	public void setRate(int rate) {
-		Rate = rate;
-	}
-
-
-	public String getType() {
-		return Type;
-	}
-
-
-	public void setType(String type) {
-		Type = type;
-	}
-	
 }
