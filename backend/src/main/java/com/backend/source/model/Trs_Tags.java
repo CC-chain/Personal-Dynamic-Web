@@ -22,7 +22,7 @@ public class Trs_Tags {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "TRS_TAGS_ID")
-	private long Tags_Id;
+	private long Id;
 
 	@ManyToOne
 	@JoinColumn(name = "ORG_TAGS_ID", foreignKey = @ForeignKey(name = "ORG_TAGS_ID_FK"))

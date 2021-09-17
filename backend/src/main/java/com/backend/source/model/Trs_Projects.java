@@ -24,7 +24,7 @@ public class Trs_Projects {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "TRS_PROJECT_ID")
-	private long Project_Id;
+	private long Id;
 
 	@ManyToOne
 	@JoinColumn(name = "ORG_PROJECT_ID", foreignKey = @ForeignKey(name = "ORG_PROJECT_ID_FK"))

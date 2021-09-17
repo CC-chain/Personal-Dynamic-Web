@@ -20,7 +20,7 @@ public class Org_Projects {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long Projects_Id;
+	private long Id;
 	
 	@Column(name = "NAME")
 	private String Name;

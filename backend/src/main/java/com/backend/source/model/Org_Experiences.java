@@ -21,7 +21,7 @@ public class Org_Experiences {
 	@Id
 	@GeneratedValue(strategy  = GenerationType.IDENTITY)
 	@Column(name = "ORG_EXPERIENCE_ID")
-	private long Experience_Id;
+	private long Id;
 	
 	@Column(name = "NAME")
 	private String Name;

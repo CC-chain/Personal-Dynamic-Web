@@ -19,7 +19,7 @@ public class Org_Tags {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ORG_TAGS_ID")
-	private long Tags_Id;
+	private long Id;
 
 	@Column(name = "NAME")
 	private String Name;

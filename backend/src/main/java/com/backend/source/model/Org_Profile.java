@@ -24,7 +24,7 @@ public class Org_Profile {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ORG_PROFILE_ID")
-	private long Profile_Id;
+	private long Id;
 	
 	@Column(name = "NAME")
 	private String Name;

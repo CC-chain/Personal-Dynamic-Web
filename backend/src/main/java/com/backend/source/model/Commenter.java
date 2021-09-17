@@ -25,7 +25,7 @@ public class Commenter {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "COMM_ID")
-	private long Commenter_Id;
+	private long Id;
 
 	@ManyToOne
 	@JoinColumn(name = "ORG_BLOG_ID", foreignKey = @ForeignKey(name = "COM_ORG_BLOG_ID_FK"))

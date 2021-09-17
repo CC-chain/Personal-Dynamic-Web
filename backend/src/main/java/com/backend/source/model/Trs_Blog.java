@@ -23,7 +23,7 @@ public class Trs_Blog {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "TRS_Blog_ID")
-	private long Blog_Id;
+	private long Id;
 
 	@ManyToOne
 	@JoinColumn(name = "ORG_BLOG_ID", foreignKey = @ForeignKey(name = "ORG_BLOG_ID_FK"))

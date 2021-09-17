@@ -23,7 +23,7 @@ public class Trs_Profile {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "TRS_PROFILE_ID")
-	private long Profile_Id;
+	private long Id;
 
 	@ManyToOne
 	@JoinColumn(name = "ORG_PROFILE_ID", foreignKey = @ForeignKey(name = "ORG_PROFILE_ID_FK"))

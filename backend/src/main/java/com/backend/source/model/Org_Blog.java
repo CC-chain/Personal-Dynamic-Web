@@ -23,7 +23,7 @@ public class Org_Blog {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ORG_BLOG_ID")
-	private long Blog_Id;
+	private long Id;
 	
 	@Column(name = "TITLE")
 	private String Title;
