@@ -7,14 +7,13 @@ Programming Languages & Tools
 *Bootstrap
 *React.JS
 *Spring Boot
-*Spring HATEOAS
 *Spring Acutator
-*Hibernate
+*Hibernate/Jpa
 *Spring Security
 *MySQL
+*Swagger
 *Localization & I18N
 *Maven
-*Servlet
 *Docker
 *Jenkins
 *AWS

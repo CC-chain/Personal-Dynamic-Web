@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "application",
+      "type": "com.backend.source.config.ApplicationProperties",
+      "sourceType": "com.backend.source.config.ApplicationProperties"
+    },
+    {
+      "name": "application.datasource",
+      "type": "com.backend.source.config.ApplicationProperties$DataSource",
+      "sourceType": "com.backend.source.config.ApplicationProperties",
+      "sourceMethod": "public com.backend.source.config.ApplicationProperties.DataSource getDatasource() "
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
