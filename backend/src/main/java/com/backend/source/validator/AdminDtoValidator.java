@@ -29,7 +29,7 @@ public class AdminDtoValidator implements BaseValidator<AdminDto> {
 	public void validateUniqueCode(AdminDto adminDto) {
 		
 		Admin admin = this.adminRepository
-						  .findByUser_Name(adminDto.getUser_Name())
+						  .findByUserName(adminDto.getUser_Name())
 						  .orElse(null);
 		
 		// Found admin with given user_name

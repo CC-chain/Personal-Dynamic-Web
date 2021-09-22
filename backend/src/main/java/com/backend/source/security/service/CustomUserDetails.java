@@ -37,7 +37,7 @@ public class CustomUserDetails implements UserDetails {
 	public static CustomUserDetails create(Admin admin) {
 		List<GrantedAuthority> authorities = Collections.singletonList(new SimpleGrantedAuthority("ROLE_ADMIN"));
 
-		return new CustomUserDetails(admin.getId(), admin.getUser_Name(), admin.getPassword(), authorities);
+		return new CustomUserDetails(admin.getId(), admin.getUserName(), admin.getPassword(), authorities);
 	}
 
 	public static CustomUserDetails create(Admin admin, Map<String, Object> attributes) {

@@ -19,11 +19,11 @@ public class Admin {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ADMIN_ID")
-	private long Id;
+	private long id;
 	
 	@Column(name = "USER_NAME")
-	private String User_Name;
+	private String userName;
 
 	@Column(name = "PASSWORD")
-	private String Password;
+	private String password;
 }

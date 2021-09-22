@@ -22,7 +22,7 @@ public class CustomUserDetailsService implements UserDetailsService{
 	@Override
 	@Transactional
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		Admin admin = adminRepository.findByUser_Name(username)
+		Admin admin = adminRepository.findByUserName(username)
 				.orElseThrow(() ->
 								new UsernameNotFoundException("Admin user not found with Username : " + 
 										username));
