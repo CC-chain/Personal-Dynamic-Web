@@ -1,0 +1,32 @@
+//MAIN//
+
+--Profile--
+{GET} /api/main/profile?lang=/? --> Get Profile Info
+{GET} /api/main/experienceslang=/? --> Get Experiences Info
+{GET} /api/main/abilities?lang=/?  --> Get Abilities Info
+{GET} /api/main/projects?lang=/?  --> Get Projects Info
+
+{PUT} /api/main/profile?lang=/?  --> Edit Profile Info
+{PUT} /api/main/experiences?lang=/?  --> Edit Experiences Info
+{PUT} /api/main/abilities?lang=/?  --> Edit Abilities Info
+{PUT} /api/main/projects?lang=/?  --> Edit Projects Info
+
+//BLOG//
+
+--Auth--
+{POST} /auth/authenticate --> For creating auth JWT.
+{POST} /auth/admin --> Get Admin partial info for admin username and email
+{POST} /auth/signup --> Create new Admin account
+
+--Post--
+{GET} /api/posts/{id}?lang=/? --> Get specific post
+{GET} /api/posts?lang=/?page=/?&size=/? --> Get posts with Pageable info (default size=5) 
+{POST} /api/posts?lang=/?   --> Register new post
+{PUT} /api/posts/{id}?lang=/?  --> Edit Post
+{DELETE} /api/posts/{id} Delete Post
+
+--Comments--
+{GET} /api/comments/posts/{id} --> Get list of all comments on specific post
+{POST} /api/comments/posts/{id} --> Register new comment with specific post
+
+
