@@ -2,7 +2,7 @@ package com.backend.source.service;
 
 public interface I18nService {
 
-	String getMessage(String value, String defaultValue, String DtoClass);
+	String getMessage(String value, String defaultValue, Class DtoClass, String fieldName);
 	
-	String getMessage(String value, String defaultValue, String DtoClass, String language);
+	String getMessage(String value, String defaultValue, Class DtoClass, String fieldName, String language);
 }

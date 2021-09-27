@@ -30,7 +30,7 @@ public class Trs_AbilitiesServiceImpl implements Trs_AbilitiesService {
 	}
 
 	@Override
-	public Trs_Abilities gelAbilityById(Trs_Abilities ability, long id) {
+	public Trs_Abilities getAbilityById(Trs_Abilities ability, long id) {
 		return abilitiesRepository.findById(id).orElseThrow(() -> 
 											new ResourceNotFoundException("Ability","Id",id));
 	}
@@ -52,6 +52,11 @@ public class Trs_AbilitiesServiceImpl implements Trs_AbilitiesService {
 		abilitiesRepository.findById(id).orElseThrow(() ->
 															new ResourceNotFoundException("Ability","Id",id));
 		abilitiesRepository.deleteById(id);
+	}
+
+	@Override
+	public Trs_Abilities getAbilityByColumnNameAndValue(String columnName, String columnValue) {
+		return abilitiesRepository.findBy(columnName, columnValue).get(0);
 	}
 
 }

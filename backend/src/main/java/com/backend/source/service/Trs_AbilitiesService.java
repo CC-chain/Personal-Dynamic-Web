@@ -9,9 +9,11 @@ public interface Trs_AbilitiesService {
 
 	List<Trs_Abilities> getAllAbilities();
 
-	Trs_Abilities gelAbilityById(Trs_Abilities ability, long id);
+	Trs_Abilities getAbilityById(Trs_Abilities ability, long id);
 
 	Trs_Abilities updateAbility(Trs_Abilities ability, long id);
+	
+	Trs_Abilities getAbilityByColumnNameAndValue(String columnName , String columnValue);
 
 	void deleteAbility(long id);
 

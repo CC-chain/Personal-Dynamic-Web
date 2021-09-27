@@ -1,6 +1,7 @@
 package com.backend.source.common.util;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -30,7 +31,9 @@ public class I18nModule extends SimpleModule {
 	
 	@Override
 	public void setupModule(SetupContext context) {
-
+		InternationalizedSerializer serializer = new InternationalizedSerializer(i18nService);
+		InternationalizingBeanSerializerModifier modifier = new InternationalizingBeanSerializerModifier(serializer);
+		
 	}
 
 	@RequiredArgsConstructor
@@ -41,11 +44,9 @@ public class I18nModule extends SimpleModule {
 		@Override
 		public List<BeanPropertyWriter> changeProperties(SerializationConfig config, BeanDescription beanDesc,
 				List<BeanPropertyWriter> beanProperties) {
-
+			serializer.addToDtoClassArray(beanDesc.getBeanClass());
 			for (BeanPropertyWriter writer : beanProperties) {
 				if (writer.getAnnotation(JsonInternationalized.class) != null) {
-					String dtoClassStr = beanDesc.getBeanClass().toString();
-					serializer.setDtoClassName(dtoClassStr.substring(dtoClassStr.lastIndexOf(".")+1));
 					writer.assignSerializer(serializer);
 				}
 			}
@@ -63,16 +64,20 @@ public class I18nModule extends SimpleModule {
 		
 		@Getter
 		@Setter
-		public String DtoClassName;
+		public ArrayList<Class> DtoClassName;
+		
+		public void addToDtoClassArray(Class DtoClass) {
+			DtoClassName.add(DtoClass);
+		}
 		
 		@Override
 		public void serialize(Object value, JsonGenerator gen, SerializerProvider provider) throws IOException {
 
 			Locale currentLocale = LocaleContextHolder.getLocale();
-			if(!StringUtils.isEmpty(DtoClassName)) {
-			String translator = i18nService.getMessage(value.toString(), value.toString(),DtoClassName,currentLocale.toString());
+			
+			String translator = i18nService.getMessage(value.toString(), value.toString(),DtoClassName.get(0),currentLocale.toString());
+			DtoClassName.remove(0);
 			gen.writeString(translator);
-			}
 		}
 	}
 }

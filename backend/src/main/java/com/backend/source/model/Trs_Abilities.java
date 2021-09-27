@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.criteria.CriteriaBuilder.Case;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -37,4 +38,17 @@ public class Trs_Abilities {
 
 	@Column(name = "TYPE")
 	private String Type;
+	
+	public String getByColumnName(String columnName){
+		switch (columnName) {
+		case "Name": {
+			return Name;
+		}
+		case "Type": {
+			return Type;
+		}
+		default:
+			throw new IllegalArgumentException("Unexpected value: " + columnName);
+		}
+	}
 }
